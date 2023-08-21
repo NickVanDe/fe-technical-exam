@@ -1,0 +1,40 @@
+<div mdbDropdown class="dropdown">
+    <button
+      class="btn btn-primary dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton"
+      aria-expanded="false"
+      mdbDropdownToggle
+    >Open Cases</button>
+    <ul mdbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>
+<table>
+    <thead>
+      <tr>
+        <th >Cases #</th>
+        <th >Case Title</th>
+        <th >Sent To</th>
+        <th >Contact Name</th>
+        <th >Status</th>
+        <th >Case Type</th>
+        <th >Sent</th>
+        <th >Sent By</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let caseinfo of caseDataInfo">
+        <td>{{ caseinfo.case_number.replace('#', '') }}</td>
+        <td>{{ caseinfo.subject }}</td>
+        <td>{{ caseinfo.contractor }}</td>
+        <td>{{ caseinfo.contractor_contact }}</td>
+        <td class="status">{{ caseinfo.status }}</td>
+        <td>{{ caseinfo.category }}</td>
+        <td>{{ caseinfo.date_added | date:'dd/MM/yyyy h:mm a' }}</td>
+        <td>{{ caseinfo.reporter }}</td>
+      </tr>
+    </tbody>
+</table>

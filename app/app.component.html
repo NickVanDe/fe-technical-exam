@@ -1,0 +1,21 @@
+<h1>MYBOS - Frontend Technical Exam</h1>
+<div class="">
+  <div class="row">
+    <div class="col-md-2">
+      <section class="nav-container">
+        <img src="https://placehold.co/232x138">
+        <nav>
+          <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
+          <br>
+          <a routerLink="/cases" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="onRequest()">Cases</a>
+          <br>
+          <a routerLink="/cases/1" routerLinkActive="active" ariaCurrentWhenActive="page">Case: 1</a>
+        
+        </nav>
+    </section>
+    </div>
+    <div class="col-md-10">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
